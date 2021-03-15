@@ -1,0 +1,599 @@
+BinaryBuilder.jl version: 0.2.4-tree-160cb2f715
+
+`/bin/bash -l -c 'set -x
+cc --version
+c++ --version
+gcc --version
+g++ --version
+clang --version
+clang++ --version
+objc --version
+f77 --version
+gfortran --version
+ld -v
+'`
+verbose sandbox enabled (running in privileged container mode)
+Parsed --rootfs as "/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b"
+Parsed --cd as "/workspace/srcdir"
+Parsed --workspace as "/agent/_work/1/s/C/CompilerSupportLibraries/build/x86_64-w64-mingw32-libgfortran5/vDTJud7B" -> "/workspace"
+Parsed --workspace as "/agent/_work/1/s/C/CompilerSupportLibraries/build/x86_64-w64-mingw32-libgfortran5/vDTJud7B/metadir" -> "/meta"
+Parsed --workspace as "/tmp/jl_tOR7oG" -> "/opt/bin"
+Parsed --workspace as "/depot/ccache" -> "/root/.ccache"
+Parsed --map as "/depot/artifacts/38b192b1c0ce5975001efbe447cc3103d3adb518" -> "/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/3d595756bb1eea26551fc95017504ef6a5f1ba7b" -> "/opt/x86_64-w64-mingw32/GCCBootstrap-8.1.0"
+Parsed --map as "/depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8" -> "/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1"
+Parsed --map as "/depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18" -> "/opt/x86_64-linux-musl/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/46c081947901cdcdf7cd0ac292e380e513714bd0" -> "/opt/x86_64-linux-musl/GCCBootstrap-8.1.0"
+--> Creating overlay workdir at /proc
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b (modifications in /proc/upper/rootfs, workspace in /proc/work/rootfs)
+--> mapping /depot/artifacts/46c081947901cdcdf7cd0ac292e380e513714bd0 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-8.1.0
+--> mapping /depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7
+--> mapping /depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1
+--> mapping /depot/artifacts/3d595756bb1eea26551fc95017504ef6a5f1ba7b to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/GCCBootstrap-8.1.0
+--> mapping /depot/artifacts/38b192b1c0ce5975001efbe447cc3103d3adb518 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/GCCBootstrap-8.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32 (modifications in /proc/upper/x86_64-w64-mingw32, workspace in /proc/work/x86_64-w64-mingw32)
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-8.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl (modifications in /proc/upper/x86_64-linux-musl, workspace in /proc/work/x86_64-linux-musl)
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+--> Mounting /dev/null at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/null
+--> Mounting /dev/tty at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/tty
+--> Mounting /dev/urandom at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/urandom
+--> workspacing /depot/ccache to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/root/.ccache
+--> workspacing /tmp/jl_tOR7oG to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/bin
+--> workspacing /agent/_work/1/s/C/CompilerSupportLibraries/build/x86_64-w64-mingw32-libgfortran5/vDTJud7B/metadir to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/meta
+--> workspacing /agent/_work/1/s/C/CompilerSupportLibraries/build/x86_64-w64-mingw32-libgfortran5/vDTJud7B to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/workspace
+--> Mounting procfs at /proc
+Child Process PID is 8740
+--> Mapping 0:0 to root:root within container namespace
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+About to run `/bin/bash` `-l` `-c` `set -x
+cc --version
+c++ --version
+gcc --version
+g++ --version
+clang --version
+clang++ --version
+objc --version
+f77 --version
+gfortran --version
+ld -v
+` 
++ cc --version
+x86_64-w64-mingw32-gcc (GCC) 8.1.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ c++ --version
+x86_64-w64-mingw32-g++ (GCC) 8.1.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ gcc --version
+x86_64-w64-mingw32-gcc (GCC) 8.1.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ g++ --version
+x86_64-w64-mingw32-g++ (GCC) 8.1.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ clang --version
+clang version 9.0.1 (/home/staticfloat/.julia/dev/BinaryBuilder/deps/downloads/llvm-project.git c1a0a213378a458fbea1a5c77b315c7dce08fd05)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ clang++ --version
+clang version 9.0.1 (/home/staticfloat/.julia/dev/BinaryBuilder/deps/downloads/llvm-project.git c1a0a213378a458fbea1a5c77b315c7dce08fd05)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ objc --version
+clang version 9.0.1 (/home/staticfloat/.julia/dev/BinaryBuilder/deps/downloads/llvm-project.git c1a0a213378a458fbea1a5c77b315c7dce08fd05)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ f77 --version
+GNU Fortran (GCC) 8.1.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ gfortran --version
+GNU Fortran (GCC) 8.1.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ ld -v
+GNU ld (GNU Binutils) 2.31
+Child Process exited, exit code 0
+`/bin/bash -l -c "# Stop if we hit any errors.
+set -e
+
+# If we're running as \`bash\`, then use the \`DEBUG\` and \`ERR\` traps
+if [ \$(basename \$0) = \"bash\" ]; then
+    trap \"trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          auto_install_license; \
+          save_env\" \
+        EXIT
+
+    trap \"RET=\\$?; \
+          trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          echo Previous command \\$! exited with \\$RET >&2; \
+          save_env; \
+          exit \\$RET\" \
+        INT TERM ERR
+
+    # Start saving everything into our history
+    trap save_history DEBUG
+else
+    # If we're running in \`sh\` or something like that, we need a
+    # slightly slimmer set of traps. :(
+    trap \"RET=\\$?; \
+          echo Previous command exited with \\$RET >&2; \
+          set +e +x; \
+          save_env; \
+          exit \\$RET\" \
+        EXIT INT TERM
+fi
+
+# Start by extracting LatestLibraries
+tar -zxvf \${WORKSPACE}/srcdir/LatestLibraries*.tar.gz -C \${prefix}
+
+echo ***********************************************************
+echo LatestLibraries logs, reproduced here for debuggability:
+cat \${prefix}/logs/LatestLibraries.log
+echo ***********************************************************
+rm -f \${prefix}/logs/LatestLibraries.log
+
+# Make sure expansions aren't empty
+shopt -s nullglob
+
+# copy out all the libraries we can find, not clobbering stuff from LL
+for d in /opt/\${target}/\${target}/lib*; do
+    cp -uav \${d}/*.\${dlext}* \${libdir}/ || true
+done
+
+# libwinpthread is a special snowflake and is only within \`bin\` for some reason
+if [[ \${target} == *mingw* ]]; then
+	cp -uav /opt/\${target}/\${target}/sys-root/bin/*.\${dlext}* \${libdir}/
+fi
+
+# Delete .a and .py files, we don't want those.
+rm -f \${libdir}/*.a \${libdir}/*.py
+
+# Delete any \`.so\` files that are not ELF files, since they're mostly likely linker scripts
+for f in \${libdir}/*.so; do
+    if [[ \"\$(file -b \"\$f\")\" != ELF* ]]; then
+        rm -f \"\$f\"
+    fi
+done
+
+# change permissions so that rpath succeeds
+for l in \${libdir}/*; do
+    chmod 0755 \"\${l}\"
+done
+
+# libgcc_s.1.dylib receives special treatment for now
+if [[ \${target} == *apple* ]]; then
+    install_name_tool -id @rpath/libgcc_s.1.dylib \${libdir}/libgcc_s.1.dylib
+fi
+
+# Install license (we license these all as GPL3, since they're from GCC)
+install_license /usr/share/licenses/GPL3
+
+"`
+verbose sandbox enabled (running in privileged container mode)
+Parsed --rootfs as "/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b"
+Parsed --cd as "/workspace/srcdir"
+Parsed --workspace as "/agent/_work/1/s/C/CompilerSupportLibraries/build/x86_64-w64-mingw32-libgfortran5/vDTJud7B" -> "/workspace"
+Parsed --workspace as "/agent/_work/1/s/C/CompilerSupportLibraries/build/x86_64-w64-mingw32-libgfortran5/vDTJud7B/metadir" -> "/meta"
+Parsed --workspace as "/tmp/jl_tOR7oG" -> "/opt/bin"
+Parsed --workspace as "/depot/ccache" -> "/root/.ccache"
+Parsed --map as "/depot/artifacts/38b192b1c0ce5975001efbe447cc3103d3adb518" -> "/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/3d595756bb1eea26551fc95017504ef6a5f1ba7b" -> "/opt/x86_64-w64-mingw32/GCCBootstrap-8.1.0"
+Parsed --map as "/depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8" -> "/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1"
+Parsed --map as "/depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18" -> "/opt/x86_64-linux-musl/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/46c081947901cdcdf7cd0ac292e380e513714bd0" -> "/opt/x86_64-linux-musl/GCCBootstrap-8.1.0"
+--> Creating overlay workdir at /proc
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b (modifications in /proc/upper/rootfs, workspace in /proc/work/rootfs)
+--> mapping /depot/artifacts/46c081947901cdcdf7cd0ac292e380e513714bd0 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-8.1.0
+--> mapping /depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7
+--> mapping /depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1
+--> mapping /depot/artifacts/3d595756bb1eea26551fc95017504ef6a5f1ba7b to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/GCCBootstrap-8.1.0
+--> mapping /depot/artifacts/38b192b1c0ce5975001efbe447cc3103d3adb518 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/GCCBootstrap-8.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32 (modifications in /proc/upper/x86_64-w64-mingw32, workspace in /proc/work/x86_64-w64-mingw32)
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-8.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl (modifications in /proc/upper/x86_64-linux-musl, workspace in /proc/work/x86_64-linux-musl)
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+--> Mounting /dev/null at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/null
+--> Mounting /dev/tty at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/tty
+--> Mounting /dev/urandom at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/urandom
+--> workspacing /depot/ccache to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/root/.ccache
+--> workspacing /tmp/jl_tOR7oG to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/bin
+--> workspacing /agent/_work/1/s/C/CompilerSupportLibraries/build/x86_64-w64-mingw32-libgfortran5/vDTJud7B/metadir to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/meta
+--> workspacing /agent/_work/1/s/C/CompilerSupportLibraries/build/x86_64-w64-mingw32-libgfortran5/vDTJud7B to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/workspace
+--> Mounting procfs at /proc
+Child Process PID is 8800
+--> Mapping 0:0 to root:root within container namespace
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+About to run `/bin/bash` `-l` `-c` `# Stop if we hit any errors.
+set -e
+
+# If we're running as `bash`, then use the `DEBUG` and `ERR` traps
+if [ $(basename $0) = "bash" ]; then
+    trap "trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          auto_install_license; \
+          save_env" \
+        EXIT
+
+    trap "RET=\$?; \
+          trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          echo Previous command \$! exited with \$RET >&2; \
+          save_env; \
+          exit \$RET" \
+        INT TERM ERR
+
+    # Start saving everything into our history
+    trap save_history DEBUG
+else
+    # If we're running in `sh` or something like that, we need a
+    # slightly slimmer set of traps. :(
+    trap "RET=\$?; \
+          echo Previous command exited with \$RET >&2; \
+          set +e +x; \
+          save_env; \
+          exit \$RET" \
+        EXIT INT TERM
+fi
+
+# Start by extracting LatestLibraries
+tar -zxvf ${WORKSPACE}/srcdir/LatestLibraries*.tar.gz -C ${prefix}
+
+echo ***********************************************************
+echo LatestLibraries logs, reproduced here for debuggability:
+cat ${prefix}/logs/LatestLibraries.log
+echo ***********************************************************
+rm -f ${prefix}/logs/LatestLibraries.log
+
+# Make sure expansions aren't empty
+shopt -s nullglob
+
+# copy out all the libraries we can find, not clobbering stuff from LL
+for d in /opt/${target}/${target}/lib*; do
+    cp -uav ${d}/*.${dlext}* ${libdir}/ || true
+done
+
+# libwinpthread is a special snowflake and is only within `bin` for some reason
+if [[ ${target} == *mingw* ]]; then
+	cp -uav /opt/${target}/${target}/sys-root/bin/*.${dlext}* ${libdir}/
+fi
+
+# Delete .a and .py files, we don't want those.
+rm -f ${libdir}/*.a ${libdir}/*.py
+
+# Delete any `.so` files that are not ELF files, since they're mostly likely linker scripts
+for f in ${libdir}/*.so; do
+    if [[ "$(file -b "$f")" != ELF* ]]; then
+        rm -f "$f"
+    fi
+done
+
+# change permissions so that rpath succeeds
+for l in ${libdir}/*; do
+    chmod 0755 "${l}"
+done
+
+# libgcc_s.1.dylib receives special treatment for now
+if [[ ${target} == *apple* ]]; then
+    install_name_tool -id @rpath/libgcc_s.1.dylib ${libdir}/libgcc_s.1.dylib
+fi
+
+# Install license (we license these all as GPL3, since they're from GCC)
+install_license /usr/share/licenses/GPL3
+
+` 
+ ---> tar -zxvf ${WORKSPACE}/srcdir/LatestLibraries*.tar.gz -C ${prefix}
+./
+./bin/
+./bin/libgomp-1.dll
+./bin/libstdc++-6.dll
+./logs/
+./logs/LatestLibraries.log
+ ---> echo ***********************************************************
+LatestLibraries.v0.3.3.x86_64-w64-mingw32.tar.gz
+ ---> echo LatestLibraries logs, reproduced here for debuggability:
+LatestLibraries logs, reproduced here for debuggability:
+ ---> cat ${prefix}/logs/LatestLibraries.log
+BinaryBuilder.jl version: 0.2.4-tree-160cb2f715
+
+`/bin/bash -l -c 'set -x
+cc --version
+c++ --version
+gcc --version
+g++ --version
+clang --version
+clang++ --version
+objc --version
+f77 --version
+gfortran --version
+ld -v
+'`
+x86_64-w64-mingw32-gcc (GCC) 9.1.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+x86_64-w64-mingw32-g++ (GCC) 9.1.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+x86_64-w64-mingw32-gcc (GCC) 9.1.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+verbose sandbox enabled (running in privileged container mode)
+Parsed --rootfs as "/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b"
+Parsed --cd as "/workspace/srcdir"
+Parsed --workspace as "/agent/_work/1/s/C/CompilerSupportLibraries/build/extraction/build/x86_64-w64-mingw32/Ki9ZAliO" -> "/workspace"
+Parsed --workspace as "/agent/_work/1/s/C/CompilerSupportLibraries/build/extraction/build/x86_64-w64-mingw32/Ki9ZAliO/metadir" -> "/meta"
+Parsed --workspace as "/tmp/jl_NuHCuU" -> "/opt/bin"
+Parsed --workspace as "/depot/ccache" -> "/root/.ccache"
+Parsed --map as "/depot/artifacts/38b192b1c0ce5975001efbe447cc3103d3adb518" -> "/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/68ba7169a2cba0c0d3f4188667eb87d5a4ca4ae4" -> "/opt/x86_64-w64-mingw32/GCCBootstrap-9.1.0"
+Parsed --map as "/depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8" -> "/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1"
+Parsed --map as "/depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18" -> "/opt/x86_64-linux-musl/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/53f47093da1e994a996a28ec1fc7fefa62452699" -> "/opt/x86_64-linux-musl/GCCBootstrap-9.1.0"
+--> Creating overlay workdir at /proc
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b (modifications in /proc/upper/rootfs, workspace in /proc/work/rootfs)
+--> mapping /depot/artifacts/53f47093da1e994a996a28ec1fc7fefa62452699 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-9.1.0
+--> mapping /depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7
+--> mapping /depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1
+--> mapping /depot/artifacts/68ba7169a2cba0c0d3f4188667eb87d5a4ca4ae4 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/GCCBootstrap-9.1.0
+--> mapping /depot/artifacts/38b192b1c0ce5975001efbe447cc3103d3adb518 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/GCCBootstrap-9.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32 (modifications in /proc/upper/x86_64-w64-mingw32, workspace in /proc/work/x86_64-w64-mingw32)
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-9.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl (modifications in /proc/upper/x86_64-linux-musl, workspace in /proc/work/x86_64-linux-musl)
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+--> Mounting /dev/null at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/null
+--> Mounting /dev/tty at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/tty
+--> Mounting /dev/urandom at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/urandom
+--> workspacing /depot/ccache to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/root/.ccache
+--> workspacing /tmp/jl_NuHCuU to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/bin
+--> workspacing /agent/_work/1/s/C/CompilerSupportLibraries/build/extraction/build/x86_64-w64-mingw32/Ki9ZAliO/metadir to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/meta
+--> workspacing /agent/_work/1/s/C/CompilerSupportLibraries/build/extraction/build/x86_64-w64-mingw32/Ki9ZAliO to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/workspace
+--> Mounting procfs at /proc
+Child Process PID is 8602
+--> Mapping 0:0 to root:root within container namespace
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+About to run `/bin/bash` `-l` `-c` `set -x
+cc --version
+c++ --version
+gcc --version
+g++ --version
+clang --version
+clang++ --version
+objc --version
+f77 --version
+gfortran --version
+ld -v
+` 
++ cc --version
++ c++ --version
++ gcc --version
++ g++ --version
+x86_64-w64-mingw32-g++ (GCC) 9.1.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ clang --version
+clang version 9.0.1 (/home/staticfloat/.julia/dev/BinaryBuilder/deps/downloads/llvm-project.git c1a0a213378a458fbea1a5c77b315c7dce08fd05)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ clang++ --version
+clang version 9.0.1 (/home/staticfloat/.julia/dev/BinaryBuilder/deps/downloads/llvm-project.git c1a0a213378a458fbea1a5c77b315c7dce08fd05)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ objc --version
+clang version 9.0.1 (/home/staticfloat/.julia/dev/BinaryBuilder/deps/downloads/llvm-project.git c1a0a213378a458fbea1a5c77b315c7dce08fd05)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ f77 --version
+GNU Fortran (GCC) 9.1.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ gfortran --version
+GNU Fortran (GCC) 9.1.0
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ ld -v
+GNU ld (GNU Binutils) 2.33.1
+Child Process exited, exit code 0
+`/bin/bash -l -c "# Stop if we hit any errors.
+set -e
+
+# If we're running as \`bash\`, then use the \`DEBUG\` and \`ERR\` traps
+if [ \$(basename \$0) = \"bash\" ]; then
+    trap \"trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          auto_install_license; \
+          save_env\" \
+        EXIT
+
+    trap \"RET=\\$?; \
+          trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          echo Previous command \\$! exited with \\$RET >&2; \
+          save_env; \
+          exit \\$RET\" \
+        INT TERM ERR
+
+    # Start saving everything into our history
+    trap save_history DEBUG
+else
+    # If we're running in \`sh\` or something like that, we need a
+    # slightly slimmer set of traps. :(
+    trap \"RET=\\$?; \
+          echo Previous command exited with \\$RET >&2; \
+          set +e +x; \
+          save_env; \
+          exit \\$RET\" \
+        EXIT INT TERM
+fi
+
+mkdir -p \${libdir}
+for d in /opt/\${target}/\${target}/lib*; do
+    # Copy all the libstdc++ and libgomp files:
+    cp -av \${d}/libstdc++*.\${dlext}* \${libdir} || true
+    cp -av \${d}/libgomp*.\${dlext}* \${libdir} || true
+    # Don't copy \`.a\` or \`.py\` files.  >:[
+    rm -f \${libdir}/*.a \${libdir}/*.py
+done
+
+"`
+verbose sandbox enabled (running in privileged container mode)
+Parsed --rootfs as "/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b"
+Parsed --cd as "/workspace/srcdir"
+Parsed --workspace as "/agent/_work/1/s/C/CompilerSupportLibraries/build/extraction/build/x86_64-w64-mingw32/Ki9ZAliO" -> "/workspace"
+Parsed --workspace as "/agent/_work/1/s/C/CompilerSupportLibraries/build/extraction/build/x86_64-w64-mingw32/Ki9ZAliO/metadir" -> "/meta"
+Parsed --workspace as "/tmp/jl_NuHCuU" -> "/opt/bin"
+Parsed --workspace as "/depot/ccache" -> "/root/.ccache"
+Parsed --map as "/depot/artifacts/38b192b1c0ce5975001efbe447cc3103d3adb518" -> "/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/68ba7169a2cba0c0d3f4188667eb87d5a4ca4ae4" -> "/opt/x86_64-w64-mingw32/GCCBootstrap-9.1.0"
+Parsed --map as "/depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8" -> "/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1"
+Parsed --map as "/depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18" -> "/opt/x86_64-linux-musl/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/53f47093da1e994a996a28ec1fc7fefa62452699" -> "/opt/x86_64-linux-musl/GCCBootstrap-9.1.0"
+--> Creating overlay workdir at /proc
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b (modifications in /proc/upper/rootfs, workspace in /proc/work/rootfs)
+--> mapping /depot/artifacts/53f47093da1e994a996a28ec1fc7fefa62452699 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-9.1.0
+--> mapping /depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7
+--> mapping /depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1
+--> mapping /depot/artifacts/68ba7169a2cba0c0d3f4188667eb87d5a4ca4ae4 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/GCCBootstrap-9.1.0
+--> mapping /depot/artifacts/38b192b1c0ce5975001efbe447cc3103d3adb518 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/GCCBootstrap-9.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32 (modifications in /proc/upper/x86_64-w64-mingw32, workspace in /proc/work/x86_64-w64-mingw32)
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-9.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl (modifications in /proc/upper/x86_64-linux-musl, workspace in /proc/work/x86_64-linux-musl)
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+--> Mounting /dev/null at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/null
+--> Mounting /dev/tty at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/tty
+--> Mounting /dev/urandom at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/urandom
+--> workspacing /depot/ccache to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/root/.ccache
+--> workspacing /tmp/jl_NuHCuU to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/bin
+--> workspacing /agent/_work/1/s/C/CompilerSupportLibraries/build/extraction/build/x86_64-w64-mingw32/Ki9ZAliO/metadir to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/meta
+--> workspacing /agent/_work/1/s/C/CompilerSupportLibraries/build/extraction/build/x86_64-w64-mingw32/Ki9ZAliO to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/workspace
+--> Mounting procfs at /proc
+Child Process PID is 8662
+--> Mapping 0:0 to root:root within container namespace
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+About to run `/bin/bash` `-l` `-c` `# Stop if we hit any errors.
+set -e
+
+# If we're running as `bash`, then use the `DEBUG` and `ERR` traps
+if [ $(basename $0) = "bash" ]; then
+    trap "trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          auto_install_license; \
+          save_env" \
+        EXIT
+
+    trap "RET=\$?; \
+          trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          echo Previous command \$! exited with \$RET >&2; \
+          save_env; \
+          exit \$RET" \
+        INT TERM ERR
+
+    # Start saving everything into our history
+    trap save_history DEBUG
+else
+    # If we're running in `sh` or something like that, we need a
+    # slightly slimmer set of traps. :(
+    trap "RET=\$?; \
+          echo Previous command exited with \$RET >&2; \
+          set +e +x; \
+          save_env; \
+          exit \$RET" \
+        EXIT INT TERM
+fi
+
+mkdir -p ${libdir}
+for d in /opt/${target}/${target}/lib*; do
+    # Copy all the libstdc++ and libgomp files:
+    cp -av ${d}/libstdc++*.${dlext}* ${libdir} || true
+    cp -av ${d}/libgomp*.${dlext}* ${libdir} || true
+    # Don't copy `.a` or `.py` files.  >:[
+    rm -f ${libdir}/*.a ${libdir}/*.py
+done
+
+` 
+ ---> mkdir -p ${libdir}
+ ---> for d in /opt/${target}/${target}/lib*
+ ---> cp -av ${d}/libstdc++*.${dlext}* ${libdir}
+'/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libstdc++-6.dll' -> '/workspace/destdir/bin/libstdc++-6.dll'
+'/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libstdc++.dll.a' -> '/workspace/destdir/bin/libstdc++.dll.a'
+'/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libstdc++.dll.a-gdb.py' -> '/workspace/destdir/bin/libstdc++.dll.a-gdb.py'
+ ---> cp -av ${d}/libgomp*.${dlext}* ${libdir}
+'/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libgomp-1.dll' -> '/workspace/destdir/bin/libgomp-1.dll'
+'/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libgomp.dll.a' -> '/workspace/destdir/bin/libgomp.dll.a'
+ ---> rm -f ${libdir}/*.a ${libdir}/*.py
+ ---> source "$_script"
+Child Process exited, exit code 0
+ ---> echo ***********************************************************
+ ---> rm -f ${prefix}/logs/LatestLibraries.log
+LatestLibraries.v0.3.3.x86_64-w64-mingw32.tar.gz
+ ---> shopt -s nullglob
+ ---> for d in /opt/${target}/${target}/lib*
+ ---> cp -uav ${d}/*.${dlext}* ${libdir}/
+'/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libatomic-1.dll' -> '/workspace/destdir/bin/libatomic-1.dll'
+'/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libatomic.dll.a' -> '/workspace/destdir/bin/libatomic.dll.a'
+'/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libgcc_s_seh-1.dll' -> '/workspace/destdir/bin/libgcc_s_seh-1.dll'
+'/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libgfortran-5.dll' -> '/workspace/destdir/bin/libgfortran-5.dll'
+'/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libgfortran.dll.a' -> '/workspace/destdir/bin/libgfortran.dll.a'
+'/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libgomp.dll.a' -> '/workspace/destdir/bin/libgomp.dll.a'
+'/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libquadmath-0.dll' -> '/workspace/destdir/bin/libquadmath-0.dll'
+'/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libquadmath.dll.a' -> '/workspace/destdir/bin/libquadmath.dll.a'
+'/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libssp-0.dll' -> '/workspace/destdir/bin/libssp-0.dll'
+'/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libssp.dll.a' -> '/workspace/destdir/bin/libssp.dll.a'
+'/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libstdc++.dll.a' -> '/workspace/destdir/bin/libstdc++.dll.a'
+'/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/lib/libstdc++.dll.a-gdb.py' -> '/workspace/destdir/bin/libstdc++.dll.a-gdb.py'
+ ---> [[ ${target} == *mingw* ]]
+ ---> cp -uav /opt/${target}/${target}/sys-root/bin/*.${dlext}* ${libdir}/
+'/opt/x86_64-w64-mingw32/x86_64-w64-mingw32/sys-root/bin/libwinpthread-1.dll' -> '/workspace/destdir/bin/libwinpthread-1.dll'
+ ---> rm -f ${libdir}/*.a ${libdir}/*.py
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> for l in ${libdir}/*
+ ---> chmod 0755 "${l}"
+ ---> [[ ${target} == *apple* ]]
+ ---> install_license /usr/share/licenses/GPL3
+Installing license file "/usr/share/licenses/GPL3" to "/workspace/destdir/share/licenses/CompilerSupportLibraries/GPL3"...
+ ---> source "$_script"
+Child Process exited, exit code 0

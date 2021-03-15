@@ -1,0 +1,308 @@
+BinaryBuilder.jl version: 0.2.3-tree-81a0c8f2da
+
+`/bin/bash -l -c 'set -x
+cc --version
+c++ --version
+gcc --version
+g++ --version
+clang --version
+clang++ --version
+objc --version
+f77 --version
+gfortran --version
+ld -v
+'`
+x86_64-w64-mingw32-gcc (GCC) 8.1.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+x86_64-w64-mingw32-g++ (GCC) 8.1.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+x86_64-w64-mingw32-gcc (GCC) 8.1.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+x86_64-w64-mingw32-g++ (GCC) 8.1.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+verbose sandbox enabled (running in privileged container mode)
+Parsed --rootfs as "/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b"
+Parsed --cd as "/workspace/srcdir"
+Parsed --workspace as "/agent/_work/1/s/O/OpenSpecFun/build/x86_64-w64-mingw32-libgfortran5/psiypALK" -> "/workspace"
+Parsed --workspace as "/agent/_work/1/s/O/OpenSpecFun/build/x86_64-w64-mingw32-libgfortran5/psiypALK/metadir" -> "/meta"
+Parsed --workspace as "/tmp/jl_2ekCn6" -> "/opt/bin"
+Parsed --workspace as "/depot/ccache" -> "/root/.ccache"
+Parsed --map as "/depot/artifacts/38b192b1c0ce5975001efbe447cc3103d3adb518" -> "/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/3d595756bb1eea26551fc95017504ef6a5f1ba7b" -> "/opt/x86_64-w64-mingw32/GCCBootstrap-8.1.0"
+Parsed --map as "/depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8" -> "/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1"
+Parsed --map as "/depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18" -> "/opt/x86_64-linux-musl/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/46c081947901cdcdf7cd0ac292e380e513714bd0" -> "/opt/x86_64-linux-musl/GCCBootstrap-8.1.0"
+--> Creating overlay workdir at /proc
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b (modifications in /proc/upper/rootfs, workspace in /proc/work/rootfs)
+--> mapping /depot/artifacts/46c081947901cdcdf7cd0ac292e380e513714bd0 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-8.1.0
+--> mapping /depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7
+--> mapping /depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1
+--> mapping /depot/artifacts/3d595756bb1eea26551fc95017504ef6a5f1ba7b to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/GCCBootstrap-8.1.0
+--> mapping /depot/artifacts/38b192b1c0ce5975001efbe447cc3103d3adb518 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/GCCBootstrap-8.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32 (modifications in /proc/upper/x86_64-w64-mingw32, workspace in /proc/work/x86_64-w64-mingw32)
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-8.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl (modifications in /proc/upper/x86_64-linux-musl, workspace in /proc/work/x86_64-linux-musl)
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+--> Mounting /dev/null at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/null
+--> Mounting /dev/tty at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/tty
+--> Mounting /dev/urandom at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/urandom
+--> workspacing /depot/ccache to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/root/.ccache
+--> workspacing /tmp/jl_2ekCn6 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/bin
+--> workspacing /agent/_work/1/s/O/OpenSpecFun/build/x86_64-w64-mingw32-libgfortran5/psiypALK/metadir to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/meta
+--> workspacing /agent/_work/1/s/O/OpenSpecFun/build/x86_64-w64-mingw32-libgfortran5/psiypALK to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/workspace
+--> Mounting procfs at /proc
+Child Process PID is 31733
+--> Mapping 0:0 to root:root within container namespace
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+About to run `/bin/bash` `-l` `-c` `set -x
+cc --version
+c++ --version
+gcc --version
+g++ --version
+clang --version
+clang++ --version
+objc --version
+f77 --version
+gfortran --version
+ld -v
+` 
++ cc --version
++ c++ --version
++ gcc --version
++ g++ --version
++ clang --version
+clang version 9.0.1 (/home/staticfloat/.julia/dev/BinaryBuilder/deps/downloads/llvm-project.git c1a0a213378a458fbea1a5c77b315c7dce08fd05)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ clang++ --version
+clang version 9.0.1 (/home/staticfloat/.julia/dev/BinaryBuilder/deps/downloads/llvm-project.git c1a0a213378a458fbea1a5c77b315c7dce08fd05)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ objc --version
+clang version 9.0.1 (/home/staticfloat/.julia/dev/BinaryBuilder/deps/downloads/llvm-project.git c1a0a213378a458fbea1a5c77b315c7dce08fd05)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: /opt/x86_64-linux-musl/bin
++ f77 --version
+GNU Fortran (GCC) 8.1.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ gfortran --version
+GNU Fortran (GCC) 8.1.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
++ ld -v
+GNU ld (GNU Binutils) 2.31
+Child Process exited, exit code 0
+`/bin/bash -l -c "# Stop if we hit any errors.
+set -e
+
+# If we're running as \`bash\`, then use the \`DEBUG\` and \`ERR\` traps
+if [ \$(basename \$0) = \"bash\" ]; then
+    trap \"trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          auto_install_license; \
+          save_env\" \
+        EXIT
+
+    trap \"RET=\\$?; \
+          trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          echo Previous command \\$! exited with \\$RET >&2; \
+          save_env; \
+          exit \\$RET\" \
+        INT TERM ERR
+
+    # Start saving everything into our history
+    trap save_history DEBUG
+else
+    # If we're running in \`sh\` or something like that, we need a
+    # slightly slimmer set of traps. :(
+    trap \"RET=\\$?; \
+          echo Previous command exited with \\$RET >&2; \
+          set +e +x; \
+          save_env; \
+          exit \\$RET\" \
+        EXIT INT TERM
+fi
+
+cd \$WORKSPACE/srcdir/openspecfun-*/
+
+# It needs to be told it's on Windows
+if [[ \${target} == *mingw* ]]; then
+    OS=WINNT
+elif [[ \${target} == *darwin* ]]; then
+    OS=Darwin
+fi
+
+# Build it
+make OS=\${OS} CC=\"\$CC\" CXX=\"\$CXX\" FC=\"\$FC\" -j\${nproc}
+
+# Install it
+make install OS=\${OS} prefix=\$prefix
+
+"`
+verbose sandbox enabled (running in privileged container mode)
+Parsed --rootfs as "/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b"
+Parsed --cd as "/workspace/srcdir"
+Parsed --workspace as "/agent/_work/1/s/O/OpenSpecFun/build/x86_64-w64-mingw32-libgfortran5/psiypALK" -> "/workspace"
+Parsed --workspace as "/agent/_work/1/s/O/OpenSpecFun/build/x86_64-w64-mingw32-libgfortran5/psiypALK/metadir" -> "/meta"
+Parsed --workspace as "/tmp/jl_2ekCn6" -> "/opt/bin"
+Parsed --workspace as "/depot/ccache" -> "/root/.ccache"
+Parsed --map as "/depot/artifacts/38b192b1c0ce5975001efbe447cc3103d3adb518" -> "/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/3d595756bb1eea26551fc95017504ef6a5f1ba7b" -> "/opt/x86_64-w64-mingw32/GCCBootstrap-8.1.0"
+Parsed --map as "/depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8" -> "/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1"
+Parsed --map as "/depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18" -> "/opt/x86_64-linux-musl/PlatformSupport-2020.2.7"
+Parsed --map as "/depot/artifacts/46c081947901cdcdf7cd0ac292e380e513714bd0" -> "/opt/x86_64-linux-musl/GCCBootstrap-8.1.0"
+--> Creating overlay workdir at /proc
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b (modifications in /proc/upper/rootfs, workspace in /proc/work/rootfs)
+--> mapping /depot/artifacts/46c081947901cdcdf7cd0ac292e380e513714bd0 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-8.1.0
+--> mapping /depot/artifacts/1a9bb425a2d8d6e56e4b68078e9d74e228daad18 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7
+--> mapping /depot/artifacts/35dc5ddb1b3037f449fee5771b6c12ebcc4350b8 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1
+--> mapping /depot/artifacts/3d595756bb1eea26551fc95017504ef6a5f1ba7b to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/GCCBootstrap-8.1.0
+--> mapping /depot/artifacts/38b192b1c0ce5975001efbe447cc3103d3adb518 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32/GCCBootstrap-8.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-w64-mingw32 (modifications in /proc/upper/x86_64-w64-mingw32, workspace in /proc/work/x86_64-w64-mingw32)
+--> Mounting overlay of /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/LLVMBootstrap-9.0.1:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/PlatformSupport-2020.2.7:/depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl/GCCBootstrap-8.1.0 at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/x86_64-linux-musl (modifications in /proc/upper/x86_64-linux-musl, workspace in /proc/work/x86_64-linux-musl)
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+--> Mounting /dev/null at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/null
+--> Mounting /dev/tty at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/tty
+--> Mounting /dev/urandom at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/dev/urandom
+--> workspacing /depot/ccache to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/root/.ccache
+--> workspacing /tmp/jl_2ekCn6 to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/opt/bin
+--> workspacing /agent/_work/1/s/O/OpenSpecFun/build/x86_64-w64-mingw32-libgfortran5/psiypALK/metadir to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/meta
+--> workspacing /agent/_work/1/s/O/OpenSpecFun/build/x86_64-w64-mingw32-libgfortran5/psiypALK to /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/workspace
+--> Mounting procfs at /proc
+Child Process PID is 31793
+--> Mapping 0:0 to root:root within container namespace
+--> Mounting procfs at /depot/artifacts/1f1eff795e9e8a2f8a3929de9f902123749a9b6b/proc
+About to run `/bin/bash` `-l` `-c` `# Stop if we hit any errors.
+set -e
+
+# If we're running as `bash`, then use the `DEBUG` and `ERR` traps
+if [ $(basename $0) = "bash" ]; then
+    trap "trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          auto_install_license; \
+          save_env" \
+        EXIT
+
+    trap "RET=\$?; \
+          trap - DEBUG INT TERM ERR EXIT; \
+          set +e +x; \
+          echo Previous command \$! exited with \$RET >&2; \
+          save_env; \
+          exit \$RET" \
+        INT TERM ERR
+
+    # Start saving everything into our history
+    trap save_history DEBUG
+else
+    # If we're running in `sh` or something like that, we need a
+    # slightly slimmer set of traps. :(
+    trap "RET=\$?; \
+          echo Previous command exited with \$RET >&2; \
+          set +e +x; \
+          save_env; \
+          exit \$RET" \
+        EXIT INT TERM
+fi
+
+cd $WORKSPACE/srcdir/openspecfun-*/
+
+# It needs to be told it's on Windows
+if [[ ${target} == *mingw* ]]; then
+    OS=WINNT
+elif [[ ${target} == *darwin* ]]; then
+    OS=Darwin
+fi
+
+# Build it
+make OS=${OS} CC="$CC" CXX="$CXX" FC="$FC" -j${nproc}
+
+# Install it
+make install OS=${OS} prefix=$prefix
+
+` 
+ ---> cd $WORKSPACE/srcdir/openspecfun-*/
+ ---> [[ ${target} == *mingw* ]]
+ ---> OS=WINNT
+ ---> make OS=${OS} CC="$CC" CXX="$CXX" FC="$FC" -j${nproc}
+gfortran -O3  -nodefaultlibs -c amos/d1mach.f -o amos/d1mach.f.o
+gfortran -O3  -nodefaultlibs -c amos/zabs.f -o amos/zabs.f.o
+gfortran -O3  -nodefaultlibs -c amos/zasyi.f -o amos/zasyi.f.o
+gfortran -O3  -nodefaultlibs -c amos/zbesk.f -o amos/zbesk.f.o
+gfortran -O3  -nodefaultlibs -c amos/zbknu.f -o amos/zbknu.f.o
+gfortran -O3  -nodefaultlibs -c amos/zexp.f -o amos/zexp.f.o
+gfortran -O3  -nodefaultlibs -c amos/zmlt.f -o amos/zmlt.f.o
+gfortran -O3  -nodefaultlibs -c amos/zshch.f -o amos/zshch.f.o
+gfortran -O3  -nodefaultlibs -c amos/zuni1.f -o amos/zuni1.f.o
+gfortran -O3  -nodefaultlibs -c amos/zunk2.f -o amos/zunk2.f.o
+gfortran -O3  -nodefaultlibs -c amos/dgamln.f -o amos/dgamln.f.o
+gfortran -O3  -nodefaultlibs -c amos/zacai.f -o amos/zacai.f.o
+gfortran -O3  -nodefaultlibs -c amos/zbesh.f -o amos/zbesh.f.o
+gfortran -O3  -nodefaultlibs -c amos/zbesy.f -o amos/zbesy.f.o
+gfortran -O3  -nodefaultlibs -c amos/zbuni.f -o amos/zbuni.f.o
+gfortran -O3  -nodefaultlibs -c amos/zkscl.f -o amos/zkscl.f.o
+gfortran -O3  -nodefaultlibs -c amos/zrati.f -o amos/zrati.f.o
+gfortran -O3  -nodefaultlibs -c amos/zsqrt.f -o amos/zsqrt.f.o
+gfortran -O3  -nodefaultlibs -c amos/zuni2.f -o amos/zuni2.f.o
+gfortran -O3  -nodefaultlibs -c amos/zuoik.f -o amos/zuoik.f.o
+gfortran -O3  -nodefaultlibs -c amos/i1mach.f -o amos/i1mach.f.o
+gfortran -O3  -nodefaultlibs -c amos/zacon.f -o amos/zacon.f.o
+gfortran -O3  -nodefaultlibs -c amos/zbesi.f -o amos/zbesi.f.o
+gfortran -O3  -nodefaultlibs -c amos/zbinu.f -o amos/zbinu.f.o
+gfortran -O3  -nodefaultlibs -c amos/zbunk.f -o amos/zbunk.f.o
+gfortran -O3  -nodefaultlibs -c amos/zlog.f -o amos/zlog.f.o
+gfortran -O3  -nodefaultlibs -c amos/zs1s2.f -o amos/zs1s2.f.o
+gfortran -O3  -nodefaultlibs -c amos/zuchk.f -o amos/zuchk.f.o
+gfortran -O3  -nodefaultlibs -c amos/zunik.f -o amos/zunik.f.o
+gfortran -O3  -nodefaultlibs -c amos/zwrsk.f -o amos/zwrsk.f.o
+gfortran -O3  -nodefaultlibs -c amos/xerror.f -o amos/xerror.f.o
+gfortran -O3  -nodefaultlibs -c amos/zairy.f -o amos/zairy.f.o
+gfortran -O3  -nodefaultlibs -c amos/zbesj.f -o amos/zbesj.f.o
+gfortran -O3  -nodefaultlibs -c amos/zbiry.f -o amos/zbiry.f.o
+gfortran -O3  -nodefaultlibs -c amos/zdiv.f -o amos/zdiv.f.o
+gfortran -O3  -nodefaultlibs -c amos/zmlri.f -o amos/zmlri.f.o
+gfortran -O3  -nodefaultlibs -c amos/zseri.f -o amos/zseri.f.o
+gfortran -O3  -nodefaultlibs -c amos/zunhj.f -o amos/zunhj.f.o
+gfortran -O3  -nodefaultlibs -c amos/zunk1.f -o amos/zunk1.f.o
+cc    -fno-gnu89-inline -std=c99 -nodefaultlibs -std=c99 -Wall -O3 -c Faddeeva/Faddeeva.c -o Faddeeva/Faddeeva.c.o
+cc    -fno-gnu89-inline -std=c99 -nodefaultlibs -std=c99 -Wall -O3 -c rem_pio2/e_rem_pio2.c -o rem_pio2/e_rem_pio2.c.o
+cc    -fno-gnu89-inline -std=c99 -nodefaultlibs -std=c99 -Wall -O3 -c rem_pio2/e_rem_pio2f.c -o rem_pio2/e_rem_pio2f.c.o
+cc    -fno-gnu89-inline -std=c99 -nodefaultlibs -std=c99 -Wall -O3 -c rem_pio2/k_rem_pio2.c -o rem_pio2/k_rem_pio2.c.o
+rem_pio2/k_rem_pio2.c: In function ‘__kernel_rem_pio2’:
+rem_pio2/k_rem_pio2.c:317:6: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+      for(j=0,fw=0.0;j<=jx;j++) fw += x[j]*f[jx+i-j]; q[i] = fw;
+      ^~~
+rem_pio2/k_rem_pio2.c:317:54: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+      for(j=0,fw=0.0;j<=jx;j++) fw += x[j]*f[jx+i-j]; q[i] = fw;
+                                                      ^
+ar -rcs libopenspecfun.a amos/d1mach.f.o amos/zabs.f.o amos/zasyi.f.o amos/zbesk.f.o amos/zbknu.f.o amos/zexp.f.o amos/zmlt.f.o amos/zshch.f.o amos/zuni1.f.o amos/zunk2.f.o amos/dgamln.f.o amos/zacai.f.o amos/zbesh.f.o amos/zbesy.f.o amos/zbuni.f.o amos/zkscl.f.o amos/zrati.f.o amos/zsqrt.f.o amos/zuni2.f.o amos/zuoik.f.o amos/i1mach.f.o amos/zacon.f.o amos/zbesi.f.o amos/zbinu.f.o amos/zbunk.f.o amos/zlog.f.o amos/zs1s2.f.o amos/zuchk.f.o amos/zunik.f.o amos/zwrsk.f.o amos/xerror.f.o amos/zairy.f.o amos/zbesj.f.o amos/zbiry.f.o amos/zdiv.f.o amos/zmlri.f.o amos/zseri.f.o amos/zunhj.f.o amos/zunk1.f.o Faddeeva/Faddeeva.c.o rem_pio2/e_rem_pio2.c.o rem_pio2/e_rem_pio2f.c.o rem_pio2/k_rem_pio2.c.o
+gfortran -shared amos/d1mach.f.o amos/zabs.f.o amos/zasyi.f.o amos/zbesk.f.o amos/zbknu.f.o amos/zexp.f.o amos/zmlt.f.o amos/zshch.f.o amos/zuni1.f.o amos/zunk2.f.o amos/dgamln.f.o amos/zacai.f.o amos/zbesh.f.o amos/zbesy.f.o amos/zbuni.f.o amos/zkscl.f.o amos/zrati.f.o amos/zsqrt.f.o amos/zuni2.f.o amos/zuoik.f.o amos/i1mach.f.o amos/zacon.f.o amos/zbesi.f.o amos/zbinu.f.o amos/zbunk.f.o amos/zlog.f.o amos/zs1s2.f.o amos/zuchk.f.o amos/zunik.f.o amos/zwrsk.f.o amos/xerror.f.o amos/zairy.f.o amos/zbesj.f.o amos/zbiry.f.o amos/zdiv.f.o amos/zmlri.f.o amos/zseri.f.o amos/zunhj.f.o amos/zunk1.f.o Faddeeva/Faddeeva.c.o rem_pio2/e_rem_pio2.c.o rem_pio2/e_rem_pio2f.c.o rem_pio2/k_rem_pio2.c.o   -L/usr/local/bin -Wl,-soname,libopenspecfun. -o libopenspecfun.dll
+ ---> make install OS=${OS} prefix=$prefix
+mkdir -p /workspace/destdir/bin
+mkdir -p /workspace/destdir/lib
+mkdir -p /workspace/destdir/include
+cp -a libopenspecfun.*dll* /workspace/destdir/bin/
+cp -a libopenspecfun.a /workspace/destdir/lib/
+cp -a Faddeeva/Faddeeva.h /workspace/destdir/include
+ ---> source "$_script"
+Installing license file "/workspace/srcdir/openspecfun-0.5.3/LICENSE.md" to "/workspace/destdir/share/licenses/OpenSpecFun/LICENSE.md"...
+Child Process exited, exit code 0
