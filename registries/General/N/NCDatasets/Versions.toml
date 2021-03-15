@@ -1,0 +1,71 @@
+["0.3.0"]
+git-tree-sha1 = "8988acd14c8ba816e2c4be98cec34e6e5fa07a16"
+
+["0.3.1"]
+git-tree-sha1 = "84bd999ad23d823fad3df9fc8d2b9f949f182c8d"
+
+["0.3.2"]
+git-tree-sha1 = "a360f7b425675d03274c7c69ae9a359801fda207"
+
+["0.4.0"]
+git-tree-sha1 = "3bd7775159dd692a8894ac23391b97339fe4e183"
+
+["0.5.0"]
+git-tree-sha1 = "4aacd69792b0013b60f01b59adf7bbe4bfbf180f"
+
+["0.5.1"]
+git-tree-sha1 = "1a60d7607c8c561ec6a2262bf3222406e8d35b66"
+
+["0.6.0"]
+git-tree-sha1 = "3d3856ccd534cbd655a66ddc3133638bb7998186"
+
+["0.7.0"]
+git-tree-sha1 = "bf3ecaa10370cc1976db878e1d1e46896f944f50"
+
+["0.8.0"]
+git-tree-sha1 = "dcd91ad28a764bdfb0ac9e5efb4b9292198bfc69"
+
+["0.9.0"]
+git-tree-sha1 = "9d0716b704c5cd142fe2c1879ffa083d292a0a42"
+
+["0.9.1"]
+git-tree-sha1 = "ce14e3144078a884240bd5d44de1a0ab4fe049a5"
+
+["0.9.2"]
+git-tree-sha1 = "7c92182f5d9094d8b46cf27648342954a630f8ec"
+
+["0.9.3"]
+git-tree-sha1 = "21f833cf06f4e0128726b25aa2fc662b7d66d1bd"
+
+["0.9.4"]
+git-tree-sha1 = "e1af72822f9ebbb70e61d084a070f07fb3a43b23"
+
+["0.9.5"]
+git-tree-sha1 = "6c0398c68c2f1957a8368b8cc6c8f9ee98ad5738"
+
+["0.10.0"]
+git-tree-sha1 = "2ca1db7b3ffb95bc7ff68df2c94ad5755ed6245b"
+
+["0.10.1"]
+git-tree-sha1 = "89d5c2259694a459194983105be10b43f6fbefc8"
+
+["0.10.2"]
+git-tree-sha1 = "271e4670a6b30ec1e5daf6ba8b30240b7d85f535"
+
+["0.10.3"]
+git-tree-sha1 = "25de2b6a884672b7790a0abb0b28f02f7ab78369"
+
+["0.10.4"]
+git-tree-sha1 = "31ce6711bc8fa173d97c59066e78caa2846ed200"
+
+["0.11.0"]
+git-tree-sha1 = "03ca13c019afb1f18a5e4854d0194b205cc49fbe"
+
+["0.11.1"]
+git-tree-sha1 = "42a19a09d2617a5b9728e662f3542dae0bfb21ef"
+
+["0.11.2"]
+git-tree-sha1 = "4e7a1793a0cd1c0c59f46c7c739b3e76460c2a3d"
+
+["0.11.3"]
+git-tree-sha1 = "b71d83c87d80f5c54c55a7a9a3aa42bf931c72aa"
