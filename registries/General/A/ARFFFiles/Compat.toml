@@ -1,5 +1,0 @@
-[0]
-CategoricalArrays = "0.8"
-FileIO = "1"
-Tables = "1"
-julia = "1"

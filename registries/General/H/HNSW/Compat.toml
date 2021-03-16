@@ -1,4 +1,0 @@
-[0]
-Distances = ["0.8", "1"]
-Reexport = ["0.2", "1"]
-julia = "1"

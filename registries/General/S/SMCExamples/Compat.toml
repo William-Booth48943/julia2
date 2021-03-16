@@ -1,8 +1,0 @@
-[0]
-Compat = "0-2"
-SequentialMonteCarlo = "0.0.0 - 0.6"
-StaticArrays = "0.0.0 - 0.12"
-julia = "0.6-1"
-
-["0.0.4-0"]
-RNGPool = "0-1"

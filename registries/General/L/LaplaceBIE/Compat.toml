@@ -1,5 +1,0 @@
-[0]
-FastGaussQuadrature = "0.0.0 - 0.4"
-GeometryTypes = "0.0.0 - 0.8"
-SurfaceTopology = "0.0.0 - 0.1"
-julia = "1"
